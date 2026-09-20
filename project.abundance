@@ -19,6 +19,36 @@
       "SVGwidth": 10
     },
     {
+      "atomType": "Export",
+      "x": 0.4,
+      "y": 0.8,
+      "uniqueID": "id-14",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "File Type",
+          "ioValue": "STEP",
+          "currentEquation": "STEP"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "RacketTennis",
+          "currentEquation": "RacketTennis"
+        }
+      ],
+      "type": null,
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "RacketTennis"
+    },
+    {
       "atomType": "Output",
       "x": 1,
       "y": 0.5,
@@ -42,7 +72,7 @@
         },
         {
           "name": "height",
-          "ioValue": 2
+          "ioValue": 1.5
         }
       ]
     }
@@ -52,6 +82,11 @@
       "ap2Name": "number or geometry",
       "ap1ID": "id-6",
       "ap2ID": "id-2"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-6",
+      "ap2ID": "id-14"
     },
     {
       "ap2Name": "geometry",
