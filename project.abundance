@@ -43,10 +43,22 @@
           "currentEquation": "RacketTennis"
         }
       ],
-      "type": null,
+      "type": "STEP",
       "resolution": 96,
       "importIndex": 0,
       "partName": "RacketTennis"
+    },
+    {
+      "atomType": "Import",
+      "x": 0.3,
+      "y": 0.8,
+      "uniqueID": "id-19",
+      "fileName": "JA_TennisRacket.svg",
+      "name": "Import",
+      "type": "SVG",
+      "repoOwner": "IDAbbott",
+      "repoName": "RacketTennis",
+      "SVGwidth": 10
     },
     {
       "atomType": "Output",
@@ -90,7 +102,7 @@
     },
     {
       "ap2Name": "geometry",
-      "ap1ID": "id-12",
+      "ap1ID": "id-19",
       "ap2ID": "id-6"
     }
   ],
