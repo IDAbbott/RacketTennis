@@ -7,6 +7,18 @@
   "topLevel": true,
   "allAtoms": [
     {
+      "atomType": "Import",
+      "x": 0.2,
+      "y": 0.5,
+      "uniqueID": "id-12",
+      "fileName": "TennisRacket.svg",
+      "name": "Import",
+      "type": "SVG",
+      "repoOwner": "IDAbbott",
+      "repoName": "RacketTennis",
+      "SVGwidth": 10
+    },
+    {
       "atomType": "Output",
       "x": 1,
       "y": 0.5,
@@ -17,18 +29,6 @@
           "ioValue": "__GEOMETRY_INPUT__"
         }
       ]
-    },
-    {
-      "atomType": "Import",
-      "x": 0.3,
-      "y": 0.5,
-      "uniqueID": "id-4",
-      "fileName": "TennisRacquet.svg",
-      "name": "Import",
-      "type": "SVG",
-      "repoOwner": "IDAbbott",
-      "repoName": "RacketTennis",
-      "SVGwidth": 10
     },
     {
       "atomType": "Extrude",
@@ -49,14 +49,14 @@
   ],
   "allConnectors": [
     {
-      "ap2Name": "geometry",
-      "ap1ID": "id-4",
-      "ap2ID": "id-6"
-    },
-    {
       "ap2Name": "number or geometry",
       "ap1ID": "id-6",
       "ap2ID": "id-2"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-12",
+      "ap2ID": "id-6"
     }
   ],
   "unitsKey": "MM",
