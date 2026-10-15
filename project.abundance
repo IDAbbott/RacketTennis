@@ -9,7 +9,7 @@
     {
       "atomType": "GitHubMolecule",
       "x": 0.1,
-      "y": 0.4,
+      "y": 0.8,
       "uniqueID": "id-104",
       "name": "Sphere",
       "ioValues": [
@@ -125,22 +125,6 @@
       ]
     },
     {
-      "atomType": "Difference",
-      "x": 0.3,
-      "y": 0.5,
-      "uniqueID": "id-118",
-      "ioValues": [
-        {
-          "name": "retain",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "remove",
-          "ioValue": "__GEOMETRY_INPUT__"
-        }
-      ]
-    },
-    {
       "atomType": "Extrude",
       "x": 0.1,
       "y": 0.6,
@@ -161,6 +145,31 @@
       "x": 0.2,
       "y": 0.6,
       "uniqueID": "id-126",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0,
+          "currentEquation": "0"
+        },
+        {
+          "name": "zDist",
+          "ioValue": -10
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.2,
+      "y": 0.4,
+      "uniqueID": "id-139",
       "ioValues": [
         {
           "name": "geometry",
@@ -217,7 +226,7 @@
     {
       "atomType": "Import",
       "x": 0.1,
-      "y": 0.3,
+      "y": 0.2,
       "uniqueID": "id-19",
       "fileName": "JA_TennisRacket.svg",
       "name": "Import",
@@ -240,8 +249,8 @@
     },
     {
       "atomType": "Assembly",
-      "x": 0.3,
-      "y": 0.4,
+      "x": 0.4,
+      "y": 0.3,
       "uniqueID": "id-36",
       "ioValues": [
         {
@@ -264,8 +273,8 @@
     },
     {
       "atomType": "Move",
-      "x": 0.1,
-      "y": 0.4,
+      "x": 0.2,
+      "y": 0.9,
       "uniqueID": "id-41",
       "ioValues": [
         {
@@ -290,7 +299,7 @@
     {
       "atomType": "Circle",
       "x": 0.1,
-      "y": 0.7,
+      "y": 0.4,
       "uniqueID": "id-48",
       "ioValues": [
         {
@@ -300,35 +309,9 @@
       ]
     },
     {
-      "atomType": "Move",
-      "x": 0.2,
-      "y": 0.7,
-      "uniqueID": "id-49",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "xDist",
-          "ioValue": 0,
-          "currentEquation": "0"
-        },
-        {
-          "name": "yDist",
-          "ioValue": -11,
-          "currentEquation": "-11"
-        },
-        {
-          "name": "zDist",
-          "ioValue": -20
-        }
-      ]
-    },
-    {
       "atomType": "Difference",
-      "x": 0.5,
-      "y": 0.6,
+      "x": 0.6,
+      "y": 0.4,
       "uniqueID": "id-57",
       "ioValues": [
         {
@@ -343,24 +326,8 @@
     },
     {
       "atomType": "Extrude",
-      "x": 0.2,
-      "y": 0.3,
-      "uniqueID": "id-6",
-      "ioValues": [
-        {
-          "name": "geometry",
-          "ioValue": "__GEOMETRY_INPUT__"
-        },
-        {
-          "name": "height",
-          "ioValue": 1.5
-        }
-      ]
-    },
-    {
-      "atomType": "Extrude",
       "x": 0.3,
-      "y": 0.7,
+      "y": 0.4,
       "uniqueID": "id-61",
       "ioValues": [
         {
@@ -375,11 +342,6 @@
     }
   ],
   "allConnectors": [
-    {
-      "ap2Name": "retain",
-      "ap1ID": "id-104",
-      "ap2ID": "id-118"
-    },
     {
       "ap2Name": "geometry",
       "ap1ID": "id-104",
@@ -398,12 +360,17 @@
     {
       "ap2Name": "remove",
       "ap1ID": "id-126",
-      "ap2ID": "id-118"
+      "ap2ID": "id-57"
     },
     {
       "ap2Name": "geometry",
+      "ap1ID": "id-139",
+      "ap2ID": "id-61"
+    },
+    {
+      "ap2Name": "Shape 1",
       "ap1ID": "id-19",
-      "ap2ID": "id-6"
+      "ap2ID": "id-36"
     },
     {
       "ap2Name": "retain",
@@ -411,19 +378,9 @@
       "ap2ID": "id-57"
     },
     {
-      "ap2Name": "Shape2",
-      "ap1ID": "id-41",
-      "ap2ID": "id-36"
-    },
-    {
       "ap2Name": "geometry",
       "ap1ID": "id-48",
-      "ap2ID": "id-49"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-49",
-      "ap2ID": "id-61"
+      "ap2ID": "id-139"
     },
     {
       "ap2Name": "geometry",
@@ -436,14 +393,9 @@
       "ap2ID": "id-2"
     },
     {
-      "ap2Name": "Shape 1",
-      "ap1ID": "id-6",
-      "ap2ID": "id-36"
-    },
-    {
-      "ap2Name": "remove",
+      "ap2Name": "Shape2",
       "ap1ID": "id-61",
-      "ap2ID": "id-57"
+      "ap2ID": "id-36"
     }
   ],
   "unitsKey": "MM",
