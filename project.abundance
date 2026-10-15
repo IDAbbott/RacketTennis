@@ -7,6 +7,108 @@
   "topLevel": true,
   "allAtoms": [
     {
+      "atomType": "GitHubMolecule",
+      "x": 0.1,
+      "y": 0.4,
+      "uniqueID": "id-104",
+      "name": "Sphere",
+      "ioValues": [
+        {
+          "name": "Radius",
+          "ioValue": 0.2,
+          "currentEquation": "0.2"
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 1,
+          "y": 0.5,
+          "uniqueID": "id-100",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Code",
+          "x": 0.5,
+          "y": 0.4,
+          "uniqueID": "id-101",
+          "ioValues": [
+            {
+              "name": "radius",
+              "ioValue": 0.2
+            }
+          ],
+          "interpreterVersion": 0,
+          "code": "//Inputs:[radius];\n\n//let shape = replicad.makeSphere(radius)\n\nconst newPlane = new replicad.Plane().pivot(0, 'Y');\n\n return { geometry: [replicad.makeSphere(radius)], tags: [],\n      color: '#A3CE5B',\n      bom:[],\n      plane: newPlane}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
+        },
+        {
+          "atomType": "Input",
+          "x": 0,
+          "y": 0.1,
+          "uniqueID": "id-102",
+          "name": "Radius",
+          "type": "number",
+          "options": []
+        },
+        {
+          "atomType": "Constant",
+          "x": 0.2,
+          "y": 0.9,
+          "uniqueID": "id-103",
+          "value": 10
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-101",
+          "ap2ID": "id-100"
+        },
+        {
+          "ap2Name": "radius",
+          "ap1ID": "id-102",
+          "ap2ID": "id-101"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2026-10-15T18:23:39.331Z",
+        "privateRepo": false,
+        "repoName": "Sphere",
+        "dateCreated": "2025-06-20T21:36:53Z",
+        "likes": 0,
+        "pngURL": "https://raw.githubusercontent.com/BarbourSmith/Sphere/master/project.png?sanitize=true",
+        "readme": "https://raw.githubusercontent.com/BarbourSmith/Sphere/master/README.md?sanitize=true",
+        "yyyy": 2025,
+        "topMoleculeID": "",
+        "userRanking": 0,
+        "userSetAsThumbnail": false,
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/BarbourSmith/Sphere",
+        "topics": [],
+        "pullRequests": [],
+        "parentRepo": "alzatin/Sphere",
+        "forks": 0,
+        "dateModified": "2025-10-24T17:13:15Z",
+        "ranking": 2,
+        "searchField": "sphere barboursmith creates a sphere ",
+        "owner": "BarbourSmith",
+        "description": "Creates a sphere",
+        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Sphere/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Sphere/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "Inches",
+      "fileTypeVersion": 1,
+      "scaleToProjectUnits": true,
+      "lastReloadedFromGithubAt": 1792107676247
+    },
+    {
       "atomType": "Export",
       "x": 0.8,
       "y": 0.8,
@@ -50,7 +152,7 @@
       "type": "SVG",
       "repoOwner": "IDAbbott",
       "repoName": "RacketTennis",
-      "SVGwidth": 10
+      "SVGwidth": 30
     },
     {
       "atomType": "Output",
@@ -72,7 +174,7 @@
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 3
+          "ioValue": 8
         }
       ]
     },
@@ -112,17 +214,16 @@
         },
         {
           "name": "xDist",
-          "ioValue": 0,
-          "currentEquation": "0"
+          "ioValue": 0
         },
         {
           "name": "yDist",
-          "ioValue": -11
+          "ioValue": -32,
+          "currentEquation": "-32"
         },
         {
           "name": "zDist",
-          "ioValue": 0,
-          "currentEquation": "0"
+          "ioValue": 0
         }
       ]
     },
@@ -180,7 +281,7 @@
     },
     {
       "atomType": "Extrude",
-      "x": 0.4,
+      "x": 0.2,
       "y": 0.3,
       "uniqueID": "id-6",
       "ioValues": [
@@ -206,26 +307,26 @@
         },
         {
           "name": "height",
-          "ioValue": 1.5
+          "ioValue": 10
         }
       ]
     }
   ],
   "allConnectors": [
     {
-      "ap2Name": "Shape 1",
-      "ap1ID": "id-19",
-      "ap2ID": "id-36"
-    },
-    {
       "ap2Name": "geometry",
-      "ap1ID": "id-33",
+      "ap1ID": "id-104",
       "ap2ID": "id-41"
     },
     {
       "ap2Name": "geometry",
-      "ap1ID": "id-36",
+      "ap1ID": "id-19",
       "ap2ID": "id-6"
+    },
+    {
+      "ap2Name": "retain",
+      "ap1ID": "id-36",
+      "ap2ID": "id-57"
     },
     {
       "ap2Name": "Shape2",
@@ -253,9 +354,9 @@
       "ap2ID": "id-2"
     },
     {
-      "ap2Name": "retain",
+      "ap2Name": "Shape 1",
       "ap1ID": "id-6",
-      "ap2ID": "id-57"
+      "ap2ID": "id-36"
     },
     {
       "ap2Name": "remove",
