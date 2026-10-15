@@ -164,7 +164,7 @@
     },
     {
       "atomType": "Difference",
-      "x": 0.4,
+      "x": 0.5,
       "y": 0.6,
       "uniqueID": "id-57",
       "ioValues": [
@@ -180,9 +180,25 @@
     },
     {
       "atomType": "Extrude",
-      "x": 0.7,
-      "y": 0.6,
+      "x": 0.4,
+      "y": 0.3,
       "uniqueID": "id-6",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 1.5
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.3,
+      "y": 0.7,
+      "uniqueID": "id-61",
       "ioValues": [
         {
           "name": "geometry",
@@ -207,11 +223,6 @@
       "ap2ID": "id-41"
     },
     {
-      "ap2Name": "retain",
-      "ap1ID": "id-36",
-      "ap2ID": "id-57"
-    },
-    {
       "ap2Name": "geometry",
       "ap1ID": "id-36",
       "ap2ID": "id-6"
@@ -227,19 +238,29 @@
       "ap2ID": "id-49"
     },
     {
-      "ap2Name": "remove",
+      "ap2Name": "geometry",
       "ap1ID": "id-49",
-      "ap2ID": "id-57"
+      "ap2ID": "id-61"
     },
     {
       "ap2Name": "geometry",
-      "ap1ID": "id-6",
+      "ap1ID": "id-57",
       "ap2ID": "id-14"
     },
     {
       "ap2Name": "number or geometry",
-      "ap1ID": "id-6",
+      "ap1ID": "id-57",
       "ap2ID": "id-2"
+    },
+    {
+      "ap2Name": "retain",
+      "ap1ID": "id-6",
+      "ap2ID": "id-57"
+    },
+    {
+      "ap2Name": "remove",
+      "ap1ID": "id-61",
+      "ap2ID": "id-57"
     }
   ],
   "unitsKey": "MM",
